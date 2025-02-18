@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            text-align: center;
+            overflow: hidden;
+            color: white;
+        }
+        h2 {
+            font-size: 3rem;
+            color: #0abdff;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 80px 0;
+        }
+        .portfolio {
+            margin: 40px auto;
+            width: 100%;
+        }
+        .skills {
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+        .skill {
+            position: relative;
+            width: 125px;
+            height: 125px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        svg {
+            width: 125px;
+            
+            height: 125px;
+            transform: rotate(-50deg);
+            filter: drop-shadow(0 0 10px rgb(6, 190, 246));
+        }
+        .circle {
+            stroke: rgba(5, 214, 251, 0.637);
+            stroke-dasharray: 377;
+            stroke-dashoffset: 377;
+            transition: stroke-dashoffset 1s ease-in-out;
+            animation: draw-circle 2s linear forwards;
+        }
+        @keyframes draw-circle {
+            0% { stroke-dashoffset: 377; }
+            100% { stroke-dashoffset: 0; }
+        }
+        .skill:hover .circle {
+            background: #0abdff;
+            stroke-dashoffset: 0;
+        }
+        .skill div {
+            position: absolute;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        .skill::after {
+            content: attr(data-skill);
+            position: absolute;
+            bottom: -70px;
+            font-size: 20px;
+            font:bold ;
+            color: rgb(48, 222, 249);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .background {
+            width: 100vw;
+            height: 100vh;
+            color: #0abdff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .cube {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: animate 8s linear infinite;
+        }
+       
+    </style>
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+    </div>
+    <div class="portfolio">
+        <h2>Professional Skills</h2>
+        <div class="skills">
+            <div class="skill" data-skill="Creativity">
+                <svg>
+                    <circle cx="60" cy="60" r="55" stroke="#4caf50" stroke-width="10" fill="none" class="circle" style="stroke-dashoffset: 37.7;"></circle>
+                </svg><br></br>
+                <div>90%</div>
+            </div>
+            <div class="skill" data-skill="Communication">
+                <svg>
+                    <circle cx="60" cy="60" r="55" stroke="#4caf50" stroke-width="10" fill="none" class="circle" style="stroke-dashoffset: 56.55;"></circle>
+                </svg><br></br>
+                <div>85%</div>
+            </div>
+            <div class="skill" data-skill="Problem Solving">
+                <svg>
+                    <circle cx="60" cy="60" r="55" stroke="#4caf50" stroke-width="10" fill="none" class="circle" style="stroke-dashoffset: 75.4;"></circle>
+                </svg><br></br>
+                <div>80%</div>
+            </div>
+            <div class="skill" data-skill="Teamwork">
+                <svg>
+                    <circle cx="60" cy="60" r="55" stroke="#4caf50" stroke-width="10" fill="none" class="circle" style="stroke-dashoffset: 94.25;"></circle>
+                </svg><br></br>
+                <div>75%</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
