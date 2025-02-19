@@ -6,7 +6,136 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* General Reset */
+        /* Responsive Design - Improved and expanded */
+  @media screen and (max-width: 1200px) { /* Adjust breakpoint as needed */
+            .card-container {
+                gap: 100px; /* Reduce gap between cards */
+            }
+            .card {
+                width: 250px; /* Slightly smaller cards */
+                height: 350px;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px 5%; /* Adjust padding */
+            }
+
+            header h1 {
+                font-size: 2rem; /* Smaller heading */
+            }
+
+            nav ul {
+                margin-top: 10px;
+                flex-direction: column; /* Stack navigation items */
+                align-items: center; /* Center the stacked items */
+                gap: 10px; /* Spacing between stacked nav items */
+            }
+            nav ul li a {
+                font-size: 1rem; /* Adjust font size */
+                padding: 8px 16px; /* Add some padding to the links */
+            }
+             .nav-button {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+
+            .hero {
+                flex-direction: column-reverse; /* Keep profile picture above text on very small screens */
+                text-align: center;
+                padding: 50px 5%; /* Adjust padding */
+                min-height: auto; /* Allow hero to shrink */
+            }
+            .text-content {
+                max-width: 100%;
+            }
+
+            .text-content h1 {
+                font-size: 2.5rem; /* Smaller heading */
+                animation: none; /* Disable typing animation on small screens */
+                border-right: none; /* Remove cursor */
+            }
+            .text-content h2 {
+                font-size: 1.5rem;
+            }
+            .text-content p {
+                font-size: 1rem;
+            }
+
+            .profile-picture {
+                justify-content: center;
+                padding-left: 0;
+                margin-top: 20px;
+            }
+            .profile-picture img {
+                width: 300px; /* Smaller image */
+                height: 300px;
+            }
+            .profile-picture::before {
+                width: 320px;
+                height: 320px;
+                top: -10px;
+                left: -10px;
+            }
+
+            .card-container {
+                flex-direction: column; /* Stack cards vertically */
+                align-items: center; /* Center cards horizontally */
+                margin-top: 5%;
+                gap: 50px;
+            }
+
+            .card {
+                width: 90%; /* Make cards full width on smaller screens */
+                max-width: 400px; /* Set a maximum width */
+                height: auto; /* Allow height to adjust */
+                padding: 20px;
+            }
+            .icon {
+                font-size: 2rem;
+            }
+            .card-content h4 {
+                font-size: 1.2rem;
+            }
+            .card-content p {
+                font-size: 0.9rem;
+            }
+
+            h5 {
+                font-size: 2.5rem;
+                margin-top: 20px;
+            }
+
+            #contact .contact-container {
+                padding: 15px;
+            }
+
+            #contact .contact-info p {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .profile-picture img {
+                width: 250px; /* Even smaller image */
+                height: 250px;
+            }
+            .profile-picture::before {
+                width: 270px;
+                height: 270px;
+                top: -8px;
+                left: -8px;
+            }
+            .text-content h1 {
+                font-size: 2rem; /* Even smaller heading */
+            }
+            h5 {
+                font-size: 2rem;
+            }
+        }
+
 * {
     margin: 0;
     padding: 0;
