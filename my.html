@@ -4,145 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7rxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7rxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-        /* Responsive Design - Improved and expanded */
-  @media screen and (max-width: 1200px) { /* Adjust breakpoint as needed */
-            .card-container {
-                gap: 100px; /* Reduce gap between cards */
-            }
-            .card {
-                width: 250px; /* Slightly smaller cards */
-                height: 350px;
-            }
-        }
-        @media screen and (max-width: 900px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-                padding: 10px 5%; /* Adjust padding */
-            }
-
-            header h1 {
-                font-size: 1rem; /* Smaller heading */
-            }
-
-            nav ul {
-                margin-top: 10px;
-                flex-direction: column; /* Stack navigation items */
-                align-items: center; /* Center the stacked items */
-                gap: 10px; /* Spacing between stacked nav items */
-            }
-            nav ul li a {
-                font-size: 1rem; /* Adjust font size */
-                padding: 8px 16px; /* Add some padding to the links */
-            }
-             .nav-button {
-                font-size: 1rem;
-                padding: 8px 16px;
-            }
-
-            .hero {
-                flex-direction: column-reverse; /* Keep profile picture above text on very small screens */
-                text-align: center;
-                padding: 50px 5%; /* Adjust padding */
-                min-height: auto; /* Allow hero to shrink */
-            }
-            .text-content {
-                max-width: 100%;
-            }
-
-            .text-content h1 {
-                font-size: 1rem; /* Smaller heading */
-                animation: none; /* Disable typing animation on small screens */
-                border-right: none; /* Remove cursor */
-            }
-            .text-content h2 {
-                font-size: 1.5rem;
-            }
-            .text-content p {
-                font-size: 1rem;
-            }
-
-            .profile-picture {
-                justify-content: center;
-                padding-left: 0;
-                margin-top: 20px;
-            }
-            .profile-picture img {
-                width: 300px; /* Smaller image */
-                height: 300px;
-            }
-            .profile-picture::before {
-                width: 320px;
-                height: 320px;
-                top: -10px;
-                left: -10px;
-            }
-
-            .card-container {
-                flex-direction: column; /* Stack cards vertically */
-                align-items: center; /* Center cards horizontally */
-                margin-top: 5%;
-                gap: 50px;
-            }
-
-            .card {
-                width: 90%; /* Make cards full width on smaller screens */
-                max-width: 400px; /* Set a maximum width */
-                height: auto; /* Allow height to adjust */
-                padding: 20px;
-            }
-            .icon {
-                font-size: 2rem;
-            }
-            .card-content h4 {
-                font-size: 1.2rem;
-            }
-            .card-content p {
-                font-size: 0.9rem;
-            }
-
-            h5 {
-                font-size: 2.5rem;
-                margin-top: 20px;
-            }
-
-            #contact .contact-container {
-                padding: 15px;
-            }
-
-            #contact .contact-info p {
-                font-size: 1rem;
-            }
-        }
-
-        @media screen and (max-width: 500px) {
-            .profile-picture img {
-                width: 250px; /* Even smaller image */
-                height: 250px;
-            }
-            .profile-picture::before {
-                width: 270px;
-                height: 270px;
-                top: -8px;
-                left: -8px;
-            }
-            .text-content h1 {
-                font-size: 1rem; /* Even smaller heading */
-            }
-            h5 {
-                font-size: 2rem;
-            }
-        }
-
+        
+        /* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+ 
 
+
+      
 /* Body Styling */
 body,html {
     width: 100%;
@@ -176,8 +52,8 @@ header {
 header h1 {
     justify-content: left;
     align-items: center;
-    color: #ebecedf5;
-    font-size: 2.8rem;
+    color: #eef2f7f5;
+    font-size: 2.5rem;
     font-weight: 600;
 
 }
@@ -335,7 +211,10 @@ button:hover {
     display: flex;
     justify-content: flex-start; /* Moves image to the left */
     padding-left: 50px; /* Adjust left spacing */
-    position: relative; /* Needed for shadow effect */
+    position: relative;
+    
+        
+        animation: fadeInLeft 1s ease; /* Needed for shadow effect */
 }
 
 /* Profile Picture Styling */
@@ -344,8 +223,9 @@ button:hover {
     height: 444px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 40px rgba(4, 177, 252, 0.951); /* Soft glow shadow */
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Animation */
+    box-shadow: 0 0 40px rgba(4, 177, 252, 0.951);
+    transform: scale(1.1); /* Soft glow shadow */
+    
 }
 
 /* Hover Effect */
@@ -354,31 +234,22 @@ button:hover {
     box-shadow: 0 0 60px rgba(3, 97, 248, 0.922); /* Enhances shadow effect */
 }
 
-/* Background Glow Effect */
-.profile-picture::before {
-    content: "";
-    position: absolute;
-    width: 470px;
-    height: 470px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    top: -13px;
-    left: -13px;
-    z-index: -1;
-    box-shadow: 0 0 80px rgb(197, 35, 35); /* Outer glow effect */
-    animation: pulse 2s infinite alternate ease-in-out; /* Pulsating glow */
-}
-/* Glow Animation */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 0.8;
+
+  
+  
+
+ /* Keyframes for Entry Animation */
+ @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
-    100% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-}
+
 
 
 /* Responsive Design */
@@ -619,6 +490,72 @@ button {
 button:hover {
     background: #0885f2;
 }
+.social-links {
+    display: flex;
+    margin-left: -10px;
+  
+        }
+.social-links img {
+            width: 100%; /* Adjusted icon size for better fit */
+            height: 40px;
+            
+            transition: background-color 0.3s, transform 0.3s ease-in-out, filter 0.3s;
+        }
+       
+        
+        .instagram-icon img {
+            
+
+            border-radius:10000px;
+          
+            
+          
+        
+        }
+
+        .instagram-icon:hover img {
+            border-radius: 1125px;
+            filter: invert(100%) sepia(10%) saturate(500%) hue-rotate(0deg) brightness(120%) contrast(100%);
+            
+
+          
+        }
+        
+       
+        
+        .facebook-icon img{
+            filter: invert(0%) sepia(96%) saturate(4%) hue-rotate(24deg) brightness(99%) contrast(96%);
+            padding: 9%;
+         
+            border-radius: 100%;
+
+            transition: 0.3s;
+            
+        }
+
+        .facebook-icon:hover img {
+            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(120%) contrast(100%);
+            transform: scale(1.1);
+        }
+        
+        .twitter-icon img{
+            border-radius: 25px;
+        }
+
+        .twitter-icon:hover img {
+            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(120%) contrast(100%);
+            border-radius: 25px;
+        }
+        .x-icon img{
+            padding: 1px;
+            border-radius: 25px;
+        }
+
+        .x-icon:hover img {
+            
+            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(120%) contrast(100%);
+        }
+ 
 
  </style>
 </head>
@@ -644,22 +581,22 @@ button:hover {
             <h2>Hello, It's Me</h2>
             <h1>KARRI DURGA SIVA</h1>
             <p>And I'm a <span class="highlight">Front</span>end Developer</p>
-            <p>I'm a web designer with extensive experience for over 3 years. My expertise is in website design, frontend development, and more.</p>
+            <p>I'm a web designer with extensive experience for over 3 years. My expertise is in website design, frontend development, and more.</p><br>
             <div class="social-links">
-                <a href="https://www.instagram.com">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAABWVBMVEVyHVFHcEx0Fvp8Fv1yFP1/FfyLCOyfBOmtAeS7AuDHAd3UANjZAs7rD6xyFvzjANTqAMHoA7l2F/yPFfx8GPmfD/zFF/XVWujoZuLyZt3pRt/yGdHyA8j1AKTViPj/9Pr////8g9f9A7r3DZz5vO794Pf+ruj9B6uzFPv7JLv+AJr+BI/+YMP/1vD+AIThG+n9GZn/vd3/YZz+AXP+GoT/r8r+AmT/b5z+HHH+I3f+G2P/ur7+FFD+Klb+fYv/wcr+LUf+LWX+AFn+Nzr+Ohz+RT7+inP+Si7/ztD+TxL/zbv+Wy//9fH+WgL+c1X+ZyX+PUv+Bzv+VXD+cxr/6eL+aQT+eAX+nDj+gwD+gxH+fSL+rYn+jwD+iwL+XhX/3rn/1bH9ZR/+lwP+nwH+xHH8ZC3+qAH+sAD+wAP+x1P+zGb+pl79mQn+uAD9J3T+ygD9O1n8pRL9twuaEkMNAAAAc3RSTlMBAF3G///////////GW9j//9nY/1r///////////7//////8b/////////////////////////////////////////////////////////////////////////////////xf///1v////////Y/9j/2VzGSus+GgAAAeNJREFUeAFFjEWiU0EQRc/tqu74V9wZ4TBiB6wG3wpzVoQ7zHCXeELypHH+KVchJAESaEs0IUv0Zv+7fwLgSAOk9ZFghcnfDw4AAg18cyhWCKNVob9NCZjQLWVrEGhJbJGDoCBpMwCrJTETAKBWgdeRGb4dmJW56PdI/KU1K4X15N+AFsW0+3/WVm7Pa0Pmu4Fh7HcbRIjMIhr3FItUGAH4SNZKjK32YjKpK3Iv0yUY0b8g0Vs0oK+8wbeyMBAQwVeo44R1z7XWq6rqpn5jiTmAeQO3iceg9zkYzKvc71iEmMFbqCJJ4tDcKFrLjX5D/MEdq8GpIUUgd/tgGboTgiUDPDZ44SXNpr0gWRcAgqEmEPJRNVPOxYaOth0oAHdCxWoOzslH+RCvlafYMgFUHvAIHoCjz16io80BrH/j0AAcJ9KWKkhn5sRyGjsDtr/sqyrsWNO1cW9/cDNLZgHLSzVvn+wMq9qbKKwy7TiIaKTW56pzW6Oa+N1OKEQdvvl2RyOE4DEOZurd1cHNeab27tyjOPfhFlucXP04ovF97B6jTOzdJwFLaNAff7N6c8incH1VpiSR67q2VgjzUU7JgbMTiQtFKmgAsCAuczlflmVZn7iGBFc1awB/p4tqUS3LDb8OPwBrSrZIO/KHZwAAAABJRU5ErkJggg==" alt="Instagram" width="30">
+                <a href="https://www.instagram.com"  class="instagram-icon">
+                    <img src="image.png" alt="Instagram" width="50">
                 </a>
                  
-                <a href="https://www.facebook.com" target="_blank">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAgVBMVEUAAAAQcP8IZf8IZ/8JZv8HZf8IZv8IZv8IaP8JZ/8HZv8IZv8FZf8YcP9FjP+TvP/g7P/////R4/9Vlf8QYP+Es/9kn/8IZv8nef8JZf8AYP/v9f/Q4v/B2P9GjP8HZv+yz//Q4/83g/8HZv/g6/+Dsv8HZf/n7//////////e6//ZLyHjAAAAK3RSTlMAEGCfz+//XyCQj98w/////////xD//6D/kBD/////7////8///5Cgz+/vONkvXQAAAPJJREFUeAF9kkUCwzAMBGVSGMrM3P//rxBaB+e6s0YREFJpw2y0cgS1cT3DQLmNWPjcwK/XA24RWIuEdg4j7OtHUX0NYedxko5+jCeZMc0En8FsVDDHSd1WDoFdIlogX46awopozWA+ythsd7s9ZxymJBkcs3wcMZC0YHDKhDNbKLowuGYC21zINIWUbQ7EwwJT7YogqgTTKaTY4tIp7HDIRadwwzVlKVyv11HG9cekFBxam8FbTInuQ4LCd3cL2Uzd+4UV/VkHfUIgMLRdQuBi7JsCxh5rQEAfrO9NYSWojruwBOOhDoR8PF+j0fuipNX+AmbCIviMIiwCAAAAAElFTkSuQmCC" alt="Facebook" width="30">
+                <a href="https://www.facebook.com" class="facebook-icon">
+                    <img src="image copy.png"alt="facebook" width="50">
                 </a>
                 
                 
-                <a href="https://www.twitter.com" target="_blank">
-                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAC4ALgMBEQACEQEDEQH/xAAaAAACAwEBAAAAAAAAAAAAAAAFBgMEBwIB/8QANxAAAQIEAggBCQkAAAAAAAAAAQIDAAQFEQYSEyExQWFxsdGSFDQ1Q1FygZHhFiIyM0RSk6HB/8QAGgEAAgMBAQAAAAAAAAAAAAAABAUCAwYBAP/EAC8RAAIBAgMFBwMFAAAAAAAAAAECAAMEBSGhERJSgbEVIjEyQVGRFDM0EyRhcfD/2gAMAwEAAhEDEQA/AHuozzNPl9K9c3NkpG1Ri6hQeu+6sprVlorvNAn2ncJ1SibcXPpDPspePSLjibcOs6GJHSPNUeM9o92WvFpOdqNw6zoYicP6ZHjPaOdmLxSParcGsmZr11gOsWTvKVXIiD4Zl3WzkkxbPvrlDKFpcQlaCClQuCN8K2UqdhjdWDAMPAxaxgTppUbsqj0hzhQ7rn+oqxLzLzkycKPzNClKjTjpXFoJdZJ1nWfw9LRd9cqVmp1Mh6GUGyZqK1Ez/iCpGRcmKixIrCmXHHAhQWmxT7dRgmpVC0zUGYEDSmWqCmciZprWHKQ3LhnyFpQAtnULrPHNtjPm7rlt7ej8WdALu7oiliamU+kpQxKrJfUc5zqzKCdercAPmT8IZ2lerWJZvCKL2hRoAKhz/wBpqZYoxJpzV+PUwuvvvnl0jPDj+2Xn1gXGHnEr7iuog/CvI/KD4l5l5xqwFPSS6WiVacyTKSc7Kl7T+5IO477b4GxGnUFXeIy95fYVE/T3R4+0Z1stOKStxtClIN0lSQSOULwxGQMOKg5kTuOTszfF8ymYrz+Q3DSQ3fiNv9kw/sUK0Bt9c5m8QcPcHZ6ZS9RfRzfM9TCy+++eXSNsO/GXn1gXGH58r7iuog7CvK/KD4l5l5y9hBivyj2kkZZC5V62fSuAIPEEXN+QMTvWtnGxzmPmV2i3CHagyPxNFTewzWB32hFHUX8R4lYp7S2JRaXZw6vum4b4njwg61s2qnebJesAu71aQ3UzbpM+uVKKlElR1kneYeeEzpzjRRfRzfM9TCG+++eXSaPDvxl59YJxeys+TPAXQnMkn2E2t/sF4U47yespxJT3W9IDlZmYlVFUrMPMk7S04U3+UNnRXHeG2Kg7L5TslxyqVF9GV6fmlpO1JeVY/C8VChSU7Qo+J1q1VhsLH5kCYslBkqY5ImNVKbU1INJWLHWbczGdvHD1mImmsUKW6gyy42h1Cm3EhSFCxSoXBgdWKnaDnCmUMNhg80KnEk6AjktXeCxiFxxaCCmxoH01M9FDp49Sr+RXePfX3HvoJHs+39tTPRRZAepPjMe+vuPfQT3Z9v7amSs0uTZWFoZFxszEnrEHvK7jYWkksbdDtCy3A0Ln/9k=" alt="Twitter" width="30">
+                <a href="https://www.twitter.com" target="_blank" class="twitter-icon">
+                    <img src="download.png" alt="twitter" width="50">
                 </a>
                 
-                <a href="https://www.x.com" target="_blank">
+                <a href="https://www.x.com" target="_blank" class="x-icon">
                     <img src="data:image/png;base64,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" alt="X" width="30">
                 </a>
                 
@@ -704,27 +641,7 @@ button:hover {
     </div>
 </section>
 
-<script>
-    
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevents page reload
-
-    let message = document.getElementById("message").value;
-
-    if (message.trim() === "") {
-        alert("Please enter a message before sending.");
-        return;
-    }
-
-    // Simulate sending message
-    alert("Your message has been sent: " + message);
-
-    // Clear textarea after sending
-    document.getElementById("message").value = "";
-});
-</script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
      
 
