@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #projects {
+  padding: 50px 20px;
+  text-align: center;
+
+}
+
+#projects h2 {
+  font-size: 2.5em;
+  margin-bottom: 60px;
+  color:rgb(1, 153, 247);
+}
+
+
+/* Project Container */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  border-radius: 55px;
+  animation: fadeInUp 1s ease-out forwards; 
+  
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Individual Project Card */
+.project {
+  background: #444;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgb(5, 165, 190);
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-out forwards; 
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Image */
+.project img {
+    margin: 30px;
+  width: 50%;
+  height: auto;
+  border-radius: 25px;
+}
+
+/* Project Details */
+.project-details {
+  padding: 15px;
+  text-align: left;
+}
+
+.project-details h3 {
+  font-size: 1.2em;
+  color: rgb(1, 206, 247);
+  margin-bottom: 10px;
+}
+
+.project-details p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Project Link */
+.project-link {
+  display: inline-block;
+  text-decoration: none;
+  background: #06b1d7;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: background 0.3s ease;
+}
+
+.project-link:hover {
+  background: rgb(247, 247, 1);
+}
+    </style>
+</head>
+<body>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+          <!-- Project 1 -->
+          <div class="project">
+            <img src="project1.jpg" alt="Project 1">
+            <div class="project-details">
+              <h3>Portfolio Website</h3>
+              <p>A personal portfolio website built using HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project">
+            <img src="project2.jpg" alt="Project 2">
+            <div class="project-details">
+              <h3>Student management</h3>
+              <p>A functional e-commerce web app developed using React.js and Firebase, featuring authentication and a product catalog.</p>
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="project">
+            <img src="project3.jpg" alt="Project 3">
+            <div class="project-details">
+              <h3>Bill Generation </h3>
+              <p>Interactive data visualizations using Python and D3.js, designed to analyze and present insights effectively.</p>
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+</body>
+</html>
