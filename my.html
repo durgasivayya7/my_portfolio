@@ -6,6 +6,7 @@
     <title>Portfolio</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7rxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         
         /* General Reset */
@@ -490,71 +491,67 @@ button {
 button:hover {
     background: #0885f2;
 }
-.social-links {
-    display: flex;
-    margin-left: -10px;
-  
-        }
-.social-links img {
-            width: 100%; /* Adjusted icon size for better fit */
-            height: 40px;
-            
-            transition: background-color 0.3s, transform 0.3s ease-in-out, filter 0.3s;
-        }
-       
-        
-        .instagram-icon img {
-            
 
-            border-radius:10000px;
-          
-            
-          
-        
-        }
 
-        .instagram-icon:hover img {
-            border-radius: 1125px;
-            filter: invert(100%) sepia(10%) saturate(500%) hue-rotate(0deg) brightness(120%) contrast(100%);
-            
+  .bi-instagram{
+    font-size: 30px;
+            color: #fff; /* Default white */
+            margin-right: 10px;
+            transition: color 0.3s;
+    
 
-          
-        }
+  }
+  a .bi-instagram {
+  text-decoration: none;
+}
+
+.bi-instagram:hover {
+ color:#0885f2; 
+}
+a{
+    text-decoration: none;;
+}
+   
+
+            
+    .bi-facebook{
+        font-size: 30px;
+            color: #fff; /* Default white */
+            margin-right: 10px;
+            transition: color 0.3s;
         
-       
-        
-        .facebook-icon img{
-            filter: invert(0%) sepia(96%) saturate(4%) hue-rotate(24deg) brightness(99%) contrast(96%);
-            padding: 9%;
+
+    }
+    .bi-facebook:hover{
+        color:#0885f2
+    }
+        .bi-twitter{
          
-            border-radius: 100%;
-
-            transition: 0.3s;
-            
+            font-size: 30px;
+            color: #fff; /* Default white */
+            margin-right: 10px;
+            transition: color 0.3s;
         }
-
-        .facebook-icon:hover img {
-            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(120%) contrast(100%);
-            transform: scale(1.1);
+        .bi-twitter:hover{
+            color:#0885f2
         }
+        .bi-twitter-x{
+            font-size: 25px;
+            color: #fff; /* Default white */
+            margin: -20px;
+       
+            transition: color 0.3s;
+
+
+        }
+        .bi-twitter-x:hover{
+            color:#0885f2;
+        }
+     
         
-        .twitter-icon img{
-            border-radius: 25px;
-        }
+   
+        
 
-        .twitter-icon:hover img {
-            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(120%) contrast(100%);
-            border-radius: 25px;
-        }
-        .x-icon img{
-            padding: 1px;
-            border-radius: 25px;
-        }
-
-        .x-icon:hover img {
-            
-            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(120%) contrast(100%);
-        }
  
 
  </style>
@@ -583,22 +580,18 @@ button:hover {
             <p>And I'm a <span class="highlight">Front</span>end Developer</p>
             <p>I'm a web designer with extensive experience for over 3 years. My expertise is in website design, frontend development, and more.</p><br>
             <div class="social-links">
-                <a href="https://www.instagram.com"  class="instagram-icon">
-                    <img src="image.png" alt="Instagram" width="50">
+                <a href="https://www.instagram.com" target="_blank">
+                <i class="bi bi-instagram"></i>
                 </a>
-                 
-                <a href="https://www.facebook.com" class="facebook-icon">
-                    <img src="image copy.png"alt="facebook" width="50">
+                <a href="https://www.facebook.com" target="_blank">
+                <i class="bi bi-facebook"></i>
                 </a>
+                <a href="https://www.twitter.com" target="_blank">
+                <i class="bi bi-twitter"></i>
+                </a> <a href="https://www.twitter.com" target="_blank"></a>
                 
-                
-                <a href="https://www.twitter.com" target="_blank" class="twitter-icon">
-                    <img src="download.png" alt="twitter" width="50">
-                </a>
-                
-                <a href="https://www.x.com" target="_blank" class="x-icon">
-                    <img src="data:image/png;base64,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" alt="X" width="30">
-                </a>
+                <i class="bi bi-twitter-x"></i>
+            </a>
                 
             </div><br>
             <button>More About Me</button>
